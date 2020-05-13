@@ -107,7 +107,7 @@ void Grid::reset()
         blockCounts[i] = 0;
     }
     
-    // Reset grid.
+    // Clear grid array.
     for (int i = 0; i < 22; i++) // Rows
     {
         for (int j = 2; j < 12; j++) // Columns
@@ -116,7 +116,7 @@ void Grid::reset()
         }
     }
     
-    
+    // Remove grid cover if active.
     if (gridCover->getImage() == imageBank->gridCoverPaused)
     {
         toggleGridCover();
@@ -204,10 +204,12 @@ int Grid::clearLines()
 {
     int linesCleared = 0;
     
+    // For each line. . .
     for (int i = 0; i < 22; i++)
     {
         bool lineComplete = true;
         
+        // Check if complete.
         for (int j = 3; j < 12; j++)
         {
             if (gridArray[i][j] == '.')
@@ -220,6 +222,7 @@ int Grid::clearLines()
         {
             linesCleared++;
             
+            // Clear line.
             for (int j = 2; j < 12; j++)
             {
                 gridArray[i][j] = '.';

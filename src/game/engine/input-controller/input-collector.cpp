@@ -48,7 +48,7 @@ InputData InputCollector::getInput()
     inputData.keyStates = getKeyStates();
     
     // InputCollector stores copy of key states for making comparisons next frame.
-    // Comparisons are necessary to determine if a key was pressed or held.
+    // Comparisons are necessary to determine pressed / held state.
     keyStatesLastFrame = inputData.keyStates;
     
     return inputData;
@@ -80,15 +80,15 @@ KeyStates InputCollector::getKeyStates()
     
     const Uint8 *keyboardState = SDL_GetKeyboardState(NULL);
     
-    keyStates.q = getKeyState(keyboardState, SDL_SCANCODE_Q, keyStatesLastFrame.q);
-    keyStates.p = getKeyState(keyboardState, SDL_SCANCODE_P, keyStatesLastFrame.p);
-    keyStates.r = getKeyState(keyboardState, SDL_SCANCODE_R, keyStatesLastFrame.r);
-    keyStates.f = getKeyState(keyboardState, SDL_SCANCODE_F, keyStatesLastFrame.f);
-    keyStates.z = getKeyState(keyboardState, SDL_SCANCODE_Z, keyStatesLastFrame.z);
-    keyStates.x = getKeyState(keyboardState, SDL_SCANCODE_X, keyStatesLastFrame.x);
-    keyStates.left = getKeyState(keyboardState, SDL_SCANCODE_LEFT, keyStatesLastFrame.left);
-    keyStates.right = getKeyState(keyboardState, SDL_SCANCODE_RIGHT, keyStatesLastFrame.right);
-    keyStates.down = getKeyState(keyboardState, SDL_SCANCODE_DOWN, keyStatesLastFrame.down);
+    keyStates.q =       getKeyState(keyboardState, SDL_SCANCODE_Q, keyStatesLastFrame.q);
+    keyStates.p =       getKeyState(keyboardState, SDL_SCANCODE_P, keyStatesLastFrame.p);
+    keyStates.r =       getKeyState(keyboardState, SDL_SCANCODE_R, keyStatesLastFrame.r);
+    keyStates.f =       getKeyState(keyboardState, SDL_SCANCODE_F, keyStatesLastFrame.f);
+    keyStates.z =       getKeyState(keyboardState, SDL_SCANCODE_Z, keyStatesLastFrame.z);
+    keyStates.x =       getKeyState(keyboardState, SDL_SCANCODE_X, keyStatesLastFrame.x);
+    keyStates.left =    getKeyState(keyboardState, SDL_SCANCODE_LEFT, keyStatesLastFrame.left);
+    keyStates.right =   getKeyState(keyboardState, SDL_SCANCODE_RIGHT, keyStatesLastFrame.right);
+    keyStates.down =    getKeyState(keyboardState, SDL_SCANCODE_DOWN, keyStatesLastFrame.down);
     
     return keyStates;
 }

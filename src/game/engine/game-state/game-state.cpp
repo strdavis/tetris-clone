@@ -60,7 +60,7 @@ GameState::GameState(shared_ptr <ImageBank> imageBank)
       highScoreDisplay  (make_shared <HighScoreDisplay> (imageBank)),
       scoreDisplay      (make_shared <ScoreDisplay>     (imageBank)),
       lineCountDisplay  (make_shared <LineCountDisplay> (imageBank)),
-      blockCountDisplay      (make_shared <BlockCountDisplay>     (imageBank)),
+      blockCountDisplay (make_shared <BlockCountDisplay>(imageBank)),
       grid              (make_shared <Grid>             (imageBank))
 {
     activeElements.push_back(background);

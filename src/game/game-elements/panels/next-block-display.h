@@ -35,10 +35,10 @@ class NextBlockDisplay : public Panel
 public:
     NextBlockDisplay(std::shared_ptr <ImageBank> imageBank);
     
-    void update(int newNextBlockIntCode);
-    void setBlock(int newNextBlockIntCode);
+    void update(int newNextBlockIdentifier);
+    void setBlock(int newNextBlockIdentifier);
     
 private:
-    int nextBlockIntCode;
+    int nextBlockIdentifier;
     std::shared_ptr <Sprite> nextBlockSprite;
 };

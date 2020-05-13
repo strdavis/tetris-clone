@@ -34,7 +34,7 @@ using std::make_shared;
 
 NextBlockDisplay::NextBlockDisplay(shared_ptr <ImageBank> imageBank)
     : Panel(imageBank),
-      nextBlockIntCode(0),
+      nextBlockIdentifier(0),
       nextBlockSprite(make_shared <Sprite> ())
 {
     sprites.push_back(nextBlockSprite);
@@ -53,24 +53,24 @@ NextBlockDisplay::NextBlockDisplay(shared_ptr <ImageBank> imageBank)
 }
 
 
-void NextBlockDisplay::update(int newNextBlockIntCode)
+void NextBlockDisplay::update(int newNextBlockIdentifier)
 {
-    if (nextBlockIntCode != newNextBlockIntCode)
+    if (nextBlockIdentifier != newNextBlockIdentifier)
     {
-        setBlock(newNextBlockIntCode);
+        setBlock(newNextBlockIdentifier);
     }
 }
 
 
-void NextBlockDisplay::setBlock(int newNextBlockIntCode)
+void NextBlockDisplay::setBlock(int newNextBlockIdentifier)
 {
-    nextBlockIntCode = newNextBlockIntCode;
+    nextBlockIdentifier = newNextBlockIdentifier;
     
     shared_ptr <WrappedGpuImage> blockImage;
     int w = 24;
     int h = 16;
     
-    switch (newNextBlockIntCode)
+    switch (newNextBlockIdentifier)
     {
         // I-block and O-block images must have different dimensions to fit in the display;
         case 0:
