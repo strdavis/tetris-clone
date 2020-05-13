@@ -84,9 +84,13 @@ void Grid::update(InputData inputData)
     else if (activeBlock->hasReachedBottom)
     {
         copyActiveBlockToGrid();
+        
         updateScore(clearLines());
+        
         checkForLevelUp();
+        
         activateNextBlock();
+        
         checkForGameOver();
     }
     
