@@ -1,4 +1,4 @@
-# tetris
+# tetris-clone
 
 A Tetris implementation for OSX written in C++ with SDL2 and SDL_GPU.
 <br /><br />
@@ -22,4 +22,8 @@ Then find the .app bundle in. . .
 ```
 build/Release/
 ```
-<br />
+<br /><br />
+
+This software is released under the MIT License.
+
+Copyright © 2020 Spencer Davis
