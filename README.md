@@ -22,7 +22,7 @@ Then find the .app bundle in. . .
 ```
 build/Release/
 ```
-<br />
+<br /><br />
 
 This software is released under the MIT License.
 
