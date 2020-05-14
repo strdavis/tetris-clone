@@ -71,6 +71,7 @@ public:
     int fastDropDelay;
     int descentDelay;
     bool hasReachedBottom;
+    bool fastDropFlag;
     std::vector <std::vector <std::vector <char>>> orientations;
     std::vector <std::vector <std::vector <char>>>::iterator orientation;
 };

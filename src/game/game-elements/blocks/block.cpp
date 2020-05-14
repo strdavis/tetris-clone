@@ -44,7 +44,8 @@ Block::Block(char (*gridArray)[23][14], int level)
       lateralMoveDelay(4),
       fastDropDelay(1),
       descentDelay(calculateDescentDelay(level)),
-      hasReachedBottom(false)
+      hasReachedBottom(false),
+      fastDropFlag(false)
 {
     
 }
@@ -134,10 +135,13 @@ void Block::fastDrop()
     if (framesSinceDownMove > fastDropDelay)
     {
         moveDown();
+        fastDropFlag = true;
     }
     else
     {
         framesSinceDownMove++;
+        
+        if (fastDropFlag) { fastDropFlag = false; };
     }
 }
 

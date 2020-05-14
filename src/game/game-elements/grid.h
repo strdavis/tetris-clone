@@ -81,6 +81,7 @@ private:
     void checkForLevelUp();
     void checkForGameOver();
     void collapseFromRow(int row);
+    void collectFastDropPoints();
     int clearLines();
     std::shared_ptr <Block> generateRandomBlock();
     std::shared_ptr <WrappedGpuImage> getImageForSubBlock(char colour);

@@ -95,6 +95,8 @@ void Grid::update(InputData inputData)
     }
     
     activeBlock->update(inputData);
+    
+    collectFastDropPoints();
 }
 
 
@@ -300,6 +302,12 @@ void Grid::updateScore(int linesCleared)
     {
         setHighScore(score);
     }
+}
+
+
+void Grid::collectFastDropPoints()
+{
+    if (activeBlock->fastDropFlag) { score++; };
 }
 
 
