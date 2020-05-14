@@ -36,7 +36,7 @@ struct InputData;
 // The active block, manipulated by the player.
 // Controls automatic descent speed.
 //
-// Subclasses contain 2D vectors or chars
+// Subclasses contain 2D vectors of chars
 // representing their possible orientations.
 // These vectors are compared against grid contents
 // to determine validity of moves.
