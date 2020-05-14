@@ -148,43 +148,14 @@
 			children = (
 				9AFC72E92458E7FB00A17E94 /* engine.h */,
 				9AFC72E82458E7FB00A17E94 /* engine.cpp */,
-				9A20C401246C062600D028DA /* input-controller */,
-				9A20C400246C061800D028DA /* file-manager */,
-				9A20C3FF246C05CF00D028DA /* image-bank */,
-				9A20C3FE246C05AF00D028DA /* display-module */,
-				9A20C3FD246C057400D028DA /* game-state */,
-				9A5EBD95246C1BD800B8865C /* misc */,
-			);
-			path = engine;
-			sourceTree = "<group>";
-		};
-		9A1537DF24603A53008380DC /* game-elements */ = {
-			isa = PBXGroup;
-			children = (
-				9A20C402246C072200D028DA /* blocks */,
-				9A20C403246C074A00D028DA /* panels */,
-				9A20C404246C077700D028DA /* banners */,
-				9A5EBD96246C1BF900B8865C /* misc */,
-			);
-			path = "game-elements";
-			sourceTree = "<group>";
-		};
-		9A20C3FD246C057400D028DA /* game-state */ = {
-			isa = PBXGroup;
-			children = (
-				9AA26D90245B9EF800A22AA5 /* game-state.h */,
-				9AA26D8F245B9EF800A22AA5 /* game-state.cpp */,
-				9AA26D9F245BA8FC00A22AA5 /* game-element.h */,
-				9AA26D9E245BA8FC00A22AA5 /* game-element.cpp */,
-				9AA26DA5245BAC6F00A22AA5 /* sprite.h */,
-				9AA26DA4245BAC6F00A22AA5 /* sprite.cpp */,
-			);
-			path = "game-state";
-			sourceTree = "<group>";
-		};
-		9A20C3FE246C05AF00D028DA /* display-module */ = {
-			isa = PBXGroup;
-			children = (
+				9AA26D84245B9BEF00A22AA5 /* input-collector.h */,
+				9AA26D83245B9BEF00A22AA5 /* input-collector.cpp */,
+				9AB0A636246B8B4900D8CE3A /* file-manager.h */,
+				9AB0A635246B8B4900D8CE3A /* file-manager.cpp */,
+				9A5BFE9E24683E5D00288DBC /* image-bank.h */,
+				9A5BFE9D24683E5D00288DBC /* image-bank.cpp */,
+				9A3DA0B824651AD500979D85 /* wrapped-gpu-image.h */,
+				9A3DA0B724651AD500979D85 /* wrapped-gpu-image.cpp */,
 				9AA26D96245BA60300A22AA5 /* display-module.h */,
 				9AA26D95245BA60300A22AA5 /* display-module.cpp */,
 				9AA26D9C245BA88400A22AA5 /* window-controller.h */,
@@ -193,37 +164,49 @@
 				9A5BFE8B2467D60200288DBC /* sdl-initializer.cpp */,
 				9AA26D99245BA85C00A22AA5 /* rendering-unit.h */,
 				9AA26D98245BA85C00A22AA5 /* rendering-unit.cpp */,
+				9AA26D90245B9EF800A22AA5 /* game-state.h */,
+				9AA26D8F245B9EF800A22AA5 /* game-state.cpp */,
+				9AA26D9F245BA8FC00A22AA5 /* game-element.h */,
+				9AA26D9E245BA8FC00A22AA5 /* game-element.cpp */,
+				9AA26DA5245BAC6F00A22AA5 /* sprite.h */,
+				9AA26DA4245BAC6F00A22AA5 /* sprite.cpp */,
+				9AB0A633246B796D00D8CE3A /* random-number-generator.h */,
+				9AB0A632246B796D00D8CE3A /* random-number-generator.cpp */,
+				9A5BFE8A2467C92400288DBC /* data-transfer-types.h */,
 			);
-			path = "display-module";
+			path = engine;
 			sourceTree = "<group>";
 		};
-		9A20C3FF246C05CF00D028DA /* image-bank */ = {
+		9A1537DF24603A53008380DC /* game-elements */ = {
 			isa = PBXGroup;
 			children = (
-				9A5BFE9E24683E5D00288DBC /* image-bank.h */,
-				9A5BFE9D24683E5D00288DBC /* image-bank.cpp */,
-				9A3DA0B824651AD500979D85 /* wrapped-gpu-image.h */,
-				9A3DA0B724651AD500979D85 /* wrapped-gpu-image.cpp */,
+				9A20C402246C072200D028DA /* blocks */,
+				9A63E7AC2461C72500C06E28 /* panel.h */,
+				9A63E7AB2461C72500C06E28 /* panel.cpp */,
+				9A1537E124603A77008380DC /* grid.h */,
+				9A1537E024603A77008380DC /* grid.cpp */,
+				9A63E7972461B97B00C06E28 /* next-block-display.h */,
+				9A63E7962461B97B00C06E28 /* next-block-display.cpp */,
+				9A63E79A2461BCE600C06E28 /* level-display.h */,
+				9A63E7992461BCE600C06E28 /* level-display.cpp */,
+				9A63E7A02461BFD000C06E28 /* high-score-display.h */,
+				9A63E79F2461BFD000C06E28 /* high-score-display.cpp */,
+				9A63E79D2461BE8B00C06E28 /* score-display.h */,
+				9A63E79C2461BE8B00C06E28 /* score-display.cpp */,
+				9A63E7A32461C21200C06E28 /* line-count-display.h */,
+				9A63E7A22461C21200C06E28 /* line-count-display.cpp */,
+				9A63E7A62461C36F00C06E28 /* block-count-display.h */,
+				9A63E7A52461C36F00C06E28 /* block-count-display.cpp */,
+				9A1537E8246078D0008380DC /* title.h */,
+				9A1537E7246078D0008380DC /* title.cpp */,
+				9A1537EC2460DE25008380DC /* instructions.h */,
+				9A1537EB2460DE25008380DC /* instructions.cpp */,
+				9AA26DA2245BA91F00A22AA5 /* background.h */,
+				9AA26DA1245BA91F00A22AA5 /* background.cpp */,
+				9A63E7A92461C4C900C06E28 /* digital-display.h */,
+				9A63E7A82461C4C900C06E28 /* digital-display.cpp */,
 			);
-			path = "image-bank";
-			sourceTree = "<group>";
-		};
-		9A20C400246C061800D028DA /* file-manager */ = {
-			isa = PBXGroup;
-			children = (
-				9AB0A636246B8B4900D8CE3A /* file-manager.h */,
-				9AB0A635246B8B4900D8CE3A /* file-manager.cpp */,
-			);
-			path = "file-manager";
-			sourceTree = "<group>";
-		};
-		9A20C401246C062600D028DA /* input-controller */ = {
-			isa = PBXGroup;
-			children = (
-				9AA26D84245B9BEF00A22AA5 /* input-collector.h */,
-				9AA26D83245B9BEF00A22AA5 /* input-collector.cpp */,
-			);
-			path = "input-controller";
+			path = "game-elements";
 			sourceTree = "<group>";
 		};
 		9A20C402246C072200D028DA /* blocks */ = {
@@ -247,61 +230,6 @@
 				9A5BFE9A2468253D00288DBC /* s-block.cpp */,
 			);
 			path = blocks;
-			sourceTree = "<group>";
-		};
-		9A20C403246C074A00D028DA /* panels */ = {
-			isa = PBXGroup;
-			children = (
-				9A63E7AC2461C72500C06E28 /* panel.h */,
-				9A63E7AB2461C72500C06E28 /* panel.cpp */,
-				9A1537E124603A77008380DC /* grid.h */,
-				9A1537E024603A77008380DC /* grid.cpp */,
-				9A63E7972461B97B00C06E28 /* next-block-display.h */,
-				9A63E7962461B97B00C06E28 /* next-block-display.cpp */,
-				9A63E79A2461BCE600C06E28 /* level-display.h */,
-				9A63E7992461BCE600C06E28 /* level-display.cpp */,
-				9A63E7A02461BFD000C06E28 /* high-score-display.h */,
-				9A63E79F2461BFD000C06E28 /* high-score-display.cpp */,
-				9A63E79D2461BE8B00C06E28 /* score-display.h */,
-				9A63E79C2461BE8B00C06E28 /* score-display.cpp */,
-				9A63E7A32461C21200C06E28 /* line-count-display.h */,
-				9A63E7A22461C21200C06E28 /* line-count-display.cpp */,
-				9A63E7A62461C36F00C06E28 /* block-count-display.h */,
-				9A63E7A52461C36F00C06E28 /* block-count-display.cpp */,
-			);
-			path = panels;
-			sourceTree = "<group>";
-		};
-		9A20C404246C077700D028DA /* banners */ = {
-			isa = PBXGroup;
-			children = (
-				9A1537E8246078D0008380DC /* title.h */,
-				9A1537E7246078D0008380DC /* title.cpp */,
-				9A1537EC2460DE25008380DC /* instructions.h */,
-				9A1537EB2460DE25008380DC /* instructions.cpp */,
-			);
-			path = banners;
-			sourceTree = "<group>";
-		};
-		9A5EBD95246C1BD800B8865C /* misc */ = {
-			isa = PBXGroup;
-			children = (
-				9AB0A633246B796D00D8CE3A /* random-number-generator.h */,
-				9AB0A632246B796D00D8CE3A /* random-number-generator.cpp */,
-				9A5BFE8A2467C92400288DBC /* data-transfer-types.h */,
-			);
-			path = misc;
-			sourceTree = "<group>";
-		};
-		9A5EBD96246C1BF900B8865C /* misc */ = {
-			isa = PBXGroup;
-			children = (
-				9AA26DA2245BA91F00A22AA5 /* background.h */,
-				9AA26DA1245BA91F00A22AA5 /* background.cpp */,
-				9A63E7A92461C4C900C06E28 /* digital-display.h */,
-				9A63E7A82461C4C900C06E28 /* digital-display.cpp */,
-			);
-			path = misc;
 			sourceTree = "<group>";
 		};
 		9AA26D89245B9C5C00A22AA5 /* Frameworks */ = {
