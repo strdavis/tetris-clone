@@ -55,7 +55,7 @@ public:
     void fastDrop();
     void rotateLeft();
     void rotateRight();
-    void controlDescent(InputData inputData);
+    void controlAutoDescent(InputData inputData);
     int calculateDescentDelay(int level);
     bool checkValidPosition();
     
@@ -66,7 +66,7 @@ public:
     int framesSinceLeftMove;
     int framesSinceRightMove;
     int framesSinceDownMove;
-    int framesSinceDescent;
+    int framesSinceAutoDescent;
     int lateralMoveDelay;
     int fastDropDelay;
     int descentDelay;

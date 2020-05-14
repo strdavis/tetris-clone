@@ -40,7 +40,7 @@ Block::Block(char (*gridArray)[23][14], int level)
       framesSinceLeftMove(0),
       framesSinceRightMove(0),
       framesSinceDownMove(0),
-      framesSinceDescent(0),
+      framesSinceAutoDescent(0),
       lateralMoveDelay(4),
       fastDropDelay(1),
       descentDelay(calculateDescentDelay(level)),
@@ -69,7 +69,7 @@ void Block::update(InputData inputData)
     
     if (inputData.keyStates.x.pressed) { rotateRight(); }
     
-    controlDescent(inputData);
+    controlAutoDescent(inputData);
 }
 
 
@@ -176,17 +176,17 @@ void Block::rotateRight()
 }
 
 
-void Block::controlDescent(InputData inputData)
+void Block::controlAutoDescent(InputData inputData)
 {
-    if ((framesSinceDescent > descentDelay) &&
+    if ((framesSinceAutoDescent > descentDelay) &&
         inputData.keyStates.down.held != true)
     {
         moveDown();
-        framesSinceDescent = 0;
+        framesSinceAutoDescent = 0;
     }
     else
     {
-        framesSinceDescent++;
+        framesSinceAutoDescent++;
     }
 }
 
