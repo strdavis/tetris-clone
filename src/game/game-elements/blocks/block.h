@@ -40,7 +40,7 @@ struct InputData;
 // representing the possible orientations of the block type.
 // These vectors are compared against grid contents
 // to determine validity of moves.
-class Block : GameElement
+class Block : public GameElement
 {
 public:
     Block(char (*gridArray)[23][14], int level);
