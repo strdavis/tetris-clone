@@ -47,9 +47,9 @@ using std::make_shared;
 Engine::Engine(string appSupportDirectory)
     : appSupportDirectory   (appSupportDirectory),
       fileManager           (make_unique <FileManager> (appSupportDirectory)),
-      imageBank             (make_shared <ImageBank> ()),
       inputCollector        (make_unique <InputCollector> ()),
       displayModule         (make_shared <DisplayModule> ()),
+      imageBank             (make_shared <ImageBank> ()),
       gameState             (make_shared <GameState> (imageBank))
 
       // Display module must be initialized before image bank.
