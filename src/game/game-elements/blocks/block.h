@@ -37,7 +37,7 @@ struct InputData;
 // Controls automatic descent speed.
 //
 // Subclasses contain 2D vectors of chars
-// representing their possible orientations.
+// representing the possible orientations of the block type.
 // These vectors are compared against grid contents
 // to determine validity of moves.
 class Block : GameElement
