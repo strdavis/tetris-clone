@@ -312,8 +312,8 @@ vector <shared_ptr <Sprite>> Grid::getSprites()
     sprites.push_back(frame);
     sprites.push_back(background);
     
-    vector <shared_ptr <Sprite>> playedBlockSprites = getPlayedBlockSprites();
-    vector <shared_ptr <Sprite>> activeBlockSprites = getActiveBlockSprites();
+    vector <shared_ptr <Sprite>> playedBlockSprites = getSpritesForFallenBlocks();
+    vector <shared_ptr <Sprite>> activeBlockSprites = getSpritesForActiveBlock();
     
     // Append block sprites to return vector.
     sprites.insert(end(sprites), begin(playedBlockSprites), end(playedBlockSprites));
@@ -325,19 +325,20 @@ vector <shared_ptr <Sprite>> Grid::getSprites()
 }
 
 
-vector <shared_ptr <Sprite>> Grid::getPlayedBlockSprites()
+vector <shared_ptr <Sprite>> Grid::getSpritesForFallenBlocks()
 {
     vector <shared_ptr <Sprite>> playedBlockSprites;
     
-    // Rows
+    // For each fallen sub-block in the grid. . .
     for (int i = 2; i < 22; i++)
     {
-        // Columns
         for (int j = 2; j < 12; j++)
         {
             if (gridArray[i][j] != '.')
             {
-                playedBlockSprites.push_back(getPlayedBlockSprite(i, j));
+                // Return a sprite of the appropriate colour.
+                char colour = gridArray[i][j];
+                playedBlockSprites.push_back(createSpriteForSubBlock(colour, j, i));
             }
         }
     }
@@ -346,60 +347,50 @@ vector <shared_ptr <Sprite>> Grid::getPlayedBlockSprites()
 }
 
 
-shared_ptr <Sprite> Grid::getPlayedBlockSprite(int gridPosX, int gridPosY)
-{
-    int w = 8;
-    int h = 8;
-    
-    // Convert grid position to sprite position.
-    int x = (w * (gridPosY - 7)) + (w / 2);
-    int y = (h * (-gridPosX + 11)) + (h / 2);
-    
-    shared_ptr <WrappedGpuImage> image = getImageForSubBlock(gridArray[gridPosX][gridPosY]);
-    
-    return make_shared <Sprite> (image, x, y, w, h);
-}
-
-
-vector <shared_ptr <Sprite>> Grid::getActiveBlockSprites()
+vector <shared_ptr <Sprite>> Grid::getSpritesForActiveBlock()
 {
     vector <shared_ptr <Sprite>> activeBlockSprites;
     
-    // Rows
+    vector <vector <char>> orientation = *(activeBlock->orientation);
+    
+    // For each sub-block of the active block. . .
     for (int i = 0; i < 4; i++)
     {
-        // Columns
         for (int j = 0; j < 4; j++)
         {
-            vector <vector <char>> orientation = *(activeBlock->orientation);
-            
             if (orientation[i][j] != '.')
             {
-                int w = 8;
-                int h = 8;
-                
+                // Get grid position.
                 int subBlockGridPosX = activeBlock->gridPosX + j;
                 int subBlockGridPosY = activeBlock->gridPosY + i;
                 
-                // Do not draw if above upper grid boundary.
+                // (Do not return sprite if subblock is above upper grid boundary).
                 if (subBlockGridPosY > 1)
                 {
-                    int x = (w * (subBlockGridPosX - 7) + (w / 2));
-                    int y = (h * (-subBlockGridPosY + 11) + (h / 2));
-                    
-                    activeBlockSprites.push_back
-                    (
-                        make_shared <Sprite>
-                        (
-                            getImageForSubBlock(orientation[i][j]), x, y, w, h
-                        )
-                    );
+                    // Return a sprite of the appropriate colour.
+                    char colour = orientation[i][j];
+                    activeBlockSprites.push_back(createSpriteForSubBlock(colour, subBlockGridPosX, subBlockGridPosY));
                 }
             }
         }
     }
     
     return activeBlockSprites;
+}
+
+
+shared_ptr <Sprite> Grid::createSpriteForSubBlock(char colour, int gridPosX, int gridPosY)
+{
+    int w = 8;
+    int h = 8;
+    
+    // Convert grid position of sub-block to global coordinates for sprite.
+    int x = (w * (gridPosX - 7)) + (w / 2);
+    int y = (h * (-gridPosY + 11)) + (h / 2);
+    
+    shared_ptr <WrappedGpuImage> image = getImageForSubBlock(colour);
+    
+    return make_shared <Sprite> (image, x, y, w, h);
 }
 
 

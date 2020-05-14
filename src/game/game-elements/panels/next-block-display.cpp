@@ -34,7 +34,7 @@ using std::make_shared;
 
 NextBlockDisplay::NextBlockDisplay(shared_ptr <ImageBank> imageBank)
     : Panel(imageBank),
-      nextBlockIdentifier(0),
+      nextBlockIdentifier(-1),
       nextBlockSprite(make_shared <Sprite> ())
 {
     sprites.push_back(nextBlockSprite);
