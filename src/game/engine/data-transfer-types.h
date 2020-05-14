@@ -66,7 +66,7 @@ struct InputData
 
 struct WindowFlags
 {
-    bool fullscreen;
+    bool fullscreen {false};
 };
 
 
