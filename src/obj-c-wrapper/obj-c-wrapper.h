@@ -29,7 +29,7 @@
 
 
 // Serves as intermediary between C++ and Cocoa functions.
-// Initializes tetris main.
+// Initializes engine.
 // Header is pure Obj-C.
 // Source is Obj-C++.
 @interface ObjCWrapper : NSObject
