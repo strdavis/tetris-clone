@@ -26,8 +26,11 @@
 #pragma once
 
 #include <memory>
+#include <vector>
 
 #include "panel.h"
+
+class WrappedGpuImage;
 
 
 class NextBlockDisplay : public Panel
@@ -41,4 +44,5 @@ public:
 private:
     int nextBlockIdentifier;
     std::shared_ptr <Sprite> nextBlockSprite;
+    std::vector <std::shared_ptr <WrappedGpuImage>> blockImages;
 };

@@ -38,6 +38,13 @@ NextBlockDisplay::NextBlockDisplay(shared_ptr <ImageBank> imageBank)
       nextBlockSprite(make_shared <Sprite> ())
 {
     sprites.push_back(nextBlockSprite);
+    blockImages.push_back(imageBank->iBlock);
+    blockImages.push_back(imageBank->oBlock);
+    blockImages.push_back(imageBank->tBlock);
+    blockImages.push_back(imageBank->jBlock);
+    blockImages.push_back(imageBank->lBlock);
+    blockImages.push_back(imageBank->zBlock);
+    blockImages.push_back(imageBank->sBlock);
     
     pos = {65, 64};
     
@@ -64,48 +71,12 @@ void NextBlockDisplay::update(int newNextBlockIdentifier)
 
 void NextBlockDisplay::setBlock(int newNextBlockIdentifier)
 {
-    nextBlockIdentifier = newNextBlockIdentifier;
-    
-    shared_ptr <WrappedGpuImage> blockImage;
     int w = 24;
+    if (newNextBlockIdentifier == 0) { w = 32; }; // I-block is slightly wider.
+    if (newNextBlockIdentifier == 1) { w = 16; }; // O-block is slightly narrower.
+    
     int h = 16;
     
-    switch (newNextBlockIdentifier)
-    {
-        // I-block and O-block images must have different dimensions to fit in the display;
-        case 0:
-            blockImage = imageBank->iBlock;
-            w = 32;
-            break;
-            
-        case 1:
-            blockImage = imageBank->oBlock;
-            w = 16;
-            break;
-            
-        case 2:
-            blockImage = imageBank->tBlock;
-            break;
-            
-        case 3:
-            blockImage = imageBank->jBlock;
-            break;
-            
-        case 4:
-            blockImage = imageBank->lBlock;
-            break;
-            
-        case 5:
-            blockImage = imageBank->zBlock;
-            break;
-            
-        case 6:
-            blockImage = imageBank->sBlock;
-            break;
-    }
-    
-    nextBlockSprite->setImage(blockImage);
+    nextBlockSprite->setImage(blockImages[newNextBlockIdentifier]);
     nextBlockSprite->setSize(w, h);
-    
-    
 }
