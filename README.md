@@ -5,6 +5,9 @@ A Tetris implementation for OSX written in C++ with SDL2 and SDL_GPU.
 Written as part of a larger project to create an engine for 2D games.
 <br /><br />
 
+![Gameplay Demo](demo/tetris-gameplay.gif)
+<br /><br />
+
 
 ### To build, you need. . . 
 
