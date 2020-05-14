@@ -63,35 +63,36 @@ void GameElement::update(InputData inputData)
 
 vector <shared_ptr <Sprite>> GameElement::getSprites()
 {
-    vector <shared_ptr <Sprite>> spritesNewCoordinates;
+    vector <shared_ptr <Sprite>> spritesGlobalCoordinates;
     
     for (auto sprite : sprites)
     {
-        SDL_Point posRelOrigin = calcuatePosRelOrigin(sprite->getPos());
-            
-        spritesNewCoordinates.push_back
-        (
-            make_shared <Sprite> (sprite->getImage(),
-                                  posRelOrigin.x,
-                                  posRelOrigin.y,
-                                  sprite->getWidth(),
-                                  sprite->getHeight())
-        );
+        // Convert local sprite coordinates (relative to game element)
+        // to global coordinates (relative to centre of screen).
+        SDL_Point globalCoordinates = calcuateGlobalSpriteCoordinates(sprite->getPos());
+          
+        shared_ptr <Sprite> spriteGlobalCoordinates = make_shared <Sprite> (sprite->getImage(),
+                                                                            globalCoordinates.x,
+                                                                            globalCoordinates.y,
+                                                                            sprite->getWidth(),
+                                                                            sprite->getHeight());
+        
+        spritesGlobalCoordinates.push_back(spriteGlobalCoordinates);
     }
     
-    return spritesNewCoordinates;
+    return spritesGlobalCoordinates;
 }
 
 
-SDL_Point GameElement::calcuatePosRelOrigin(SDL_Point posRelElement)
+SDL_Point GameElement::calcuateGlobalSpriteCoordinates(SDL_Point localCoordinates)
 {
     // Convert element-relative coordinates to origin-relative coordinates.
-    SDL_Point posRelOrigin = this->getPos();
+    SDL_Point globalCoordinates = this->getPos();
         
-    posRelOrigin.x += posRelElement.x;
-    posRelOrigin.y += posRelElement.y;
+    globalCoordinates.x += localCoordinates.x;
+    globalCoordinates.y += localCoordinates.y;
     
-    return posRelOrigin;
+    return globalCoordinates;;
 }
 
 

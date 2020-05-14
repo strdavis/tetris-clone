@@ -55,7 +55,7 @@ public:
     SDL_Point getPos();
     
 protected:
-    SDL_Point calcuatePosRelOrigin(SDL_Point posRelElement);
+    SDL_Point calcuateGlobalSpriteCoordinates(SDL_Point posRelElement);
     
     SDL_Point pos;
     int width;
