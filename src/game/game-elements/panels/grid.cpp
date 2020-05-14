@@ -337,24 +337,27 @@ vector <shared_ptr <Sprite>> Grid::getPlayedBlockSprites()
         {
             if (gridArray[i][j] != '.')
             {
-                int w = 8;
-                int h = 8;
-                
-                int x = (w * (j - 7)) + (w / 2);
-                int y = (h * (-i + 11)) + (h / 2);
-                
-                playedBlockSprites.push_back
-                (
-                    make_shared <Sprite>
-                    (
-                        getImageForSubBlock(gridArray[i][j]), x, y, w, h
-                    )
-                );
+                playedBlockSprites.push_back(getPlayedBlockSprite(i, j));
             }
         }
     }
     
     return playedBlockSprites;
+}
+
+
+shared_ptr <Sprite> Grid::getPlayedBlockSprite(int gridPosX, int gridPosY)
+{
+    int w = 8;
+    int h = 8;
+    
+    // Convert grid position to sprite position.
+    int x = (w * (gridPosY - 7)) + (w / 2);
+    int y = (h * (-gridPosX + 11)) + (h / 2);
+    
+    shared_ptr <WrappedGpuImage> image = getImageForSubBlock(gridArray[gridPosX][gridPosY]);
+    
+    return make_shared <Sprite> (image, x, y, w, h);
 }
 
 

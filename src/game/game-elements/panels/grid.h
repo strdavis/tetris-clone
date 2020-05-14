@@ -84,6 +84,7 @@ private:
     int clearLines();
     std::shared_ptr <Block> generateRandomBlock();
     std::shared_ptr <WrappedGpuImage> getImageForSubBlock(char colour);
+    std::shared_ptr <Sprite> getPlayedBlockSprite(int gridPosX, int gridPosY);
     std::vector <std::shared_ptr <Sprite>> getPlayedBlockSprites();
     std::vector <std::shared_ptr <Sprite>> getActiveBlockSprites();
     
