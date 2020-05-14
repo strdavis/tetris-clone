@@ -1,8 +1,6 @@
 # tetris-clone
 
 A Tetris implementation for OSX written in C++ with SDL2 and SDL_GPU.
-<br />
-Written as part of a larger project to create an engine for 2D games.
 <br /><br />
 
 ![Gameplay Demo](demo/tetris-gameplay.gif)
