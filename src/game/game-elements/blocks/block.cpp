@@ -206,9 +206,9 @@ int Block::calculateDescentDelay(int level)
         delayDecrement = delayDecrement + (delayDecrementBase / i);
     }
         
-    delay = delay - delayDecrement;//level 8 delay = 2 (same as fast-drop speed)
+    delay = delay - delayDecrement;
     
-    if (delay < 1) {delay = 1;}//level 9 delay = 1 (insane)
+    if (delay < 1) {delay = 1;} // Level 9 delay = 1 (same as fast-drop delay).
         
     return delay;
 }
