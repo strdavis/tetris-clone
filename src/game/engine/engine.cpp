@@ -94,6 +94,7 @@ void Engine::limitFPS(int fps, int frameStartTime)
     frameEndTime = SDL_GetTicks();
     ticksElapsed = frameEndTime - frameStartTime;
     ticksRemaining = frameDuration - ticksElapsed;
+    
     if (ticksRemaining > 0)
     {
         SDL_Delay(ticksRemaining);
