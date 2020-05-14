@@ -384,7 +384,7 @@ shared_ptr <Sprite> Grid::createSpriteForSubBlock(char colour, int gridPosX, int
     int w = 8;
     int h = 8;
     
-    // Convert grid position of sub-block to global coordinates for sprite.
+    // Convert grid position of sub-block to sprite coordinates.
     int x = (w * (gridPosX - 7)) + (w / 2);
     int y = (h * (-gridPosY + 11)) + (h / 2);
     
