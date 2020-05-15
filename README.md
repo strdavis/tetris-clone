@@ -18,7 +18,7 @@ Download the [SDL 2.0 runtime binaries](https://www.libsdl.org/download-2.0.php)
 <br />
 
 
-Download the [SDL_GPU repo](https://github.com/grimfang4/sdl-gpu). From the root directory of the repository, run. . .
+Download the [SDL_gpu repository](https://github.com/grimfang4/sdl-gpu). From the root directory of the repository, run. . .
 ```
 cmake -G "Unix Makefiles"
 make
