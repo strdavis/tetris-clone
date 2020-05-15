@@ -1,5 +1,5 @@
 DerivedData
 xcuserdata
 build
-SDL2/
-SDL_gpu/
+SDL2.framework
+SDL_gpu.framework
