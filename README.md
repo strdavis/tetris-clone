@@ -11,6 +11,12 @@ Written as part of a larger project to create an engine for 2D games.
 
 ## To build. . . 
 
+Clone this repository:
+```
+git clone https://github.com/strdavis/tetris-clone.git
+```
+<br />
+
 Install SDL 2.0:
 ```
 brew install sdl2
