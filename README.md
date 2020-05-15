@@ -13,7 +13,10 @@ Written as part of a larger project to create an engine for 2D games.
 
 Download the [SDL 2.0 runtime binaries](https://www.libsdl.org/download-2.0.php). 
 <br />
-Copy the .framework into the root directory of this repository.
+Copy the .framework to. . .
+```
+/Library/Frameworks
+```
 <br /><br />
 
 Download the [SDL_gpu repository](https://github.com/grimfang4/sdl-gpu). From its root directory, build it:
@@ -25,7 +28,10 @@ Find the .framework in. . .
 ```
 SDL_gpu/lib
 ```
-. . . and copy it to the root directory of this repository.
+. . . and copy it to. . .
+```
+/Library/Frameworks
+```
 <br /><br />
 
 
