@@ -25,7 +25,7 @@
 
 #include "title.h"
 
-#include "SDL2/SDL_rect.h"
+#include "SDL_rect.h"
 
 #include "image-bank.h"
 #include "sprite.h"

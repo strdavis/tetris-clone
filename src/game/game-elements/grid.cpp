@@ -27,7 +27,7 @@
 
 #include <iostream>
 
-#include "SDL2_gpu/SDL_gpu.h"
+#include "SDL_gpu.h"
 
 #include "random-number-generator.h"
 #include "data-transfer-types.h"

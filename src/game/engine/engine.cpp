@@ -27,8 +27,7 @@
 
 #include <iostream>
 
-#include <SDL2/SDL.h>
-#include <SDL2_gpu/SDL_gpu.h>
+#include "SDL_gpu.h"
 
 #include "data-transfer-types.h"
 #include "file-manager.h"

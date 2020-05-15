@@ -28,7 +28,7 @@
 #include <memory>
 #include <vector>
 
-#include "SDL2/SDL_rect.h"
+#include "SDL_rect.h"
 
 struct ImageBank;
 struct InputData;

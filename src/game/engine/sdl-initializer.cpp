@@ -29,7 +29,7 @@
 using std::cout;
 using std::endl;
 
-#include "SDL2_gpu/SDL_gpu.h"
+#include "SDL_gpu.h"
 
 
 SdlInitializer::SdlInitializer()
