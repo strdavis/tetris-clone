@@ -57,14 +57,10 @@ Now we're ready to build. Install the XCode command-line developer tools:
 ```
 xcode-select --install
 ```
-<br />
-
 Then run xcodebuild from the root directory of this repository:
 ```
 xcodebuild -project tetris.xcodeproj
 ```
-<br />
-
 And find the .app bundle in. . . 
 ```
 build/Release/
