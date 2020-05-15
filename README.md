@@ -11,12 +11,9 @@ Written as part of a larger project to create an engine for 2D games.
 
 ## To build. . . 
 
-Download this repository.
-<br /><br />
 Download the [SDL 2.0 runtime binaries](https://www.libsdl.org/download-2.0.php). 
-<br />
 Copy the .framework into the root directory of this repository.
-<br />
+<br /><br />
 
 Download the [SDL_gpu repository](https://github.com/grimfang4/sdl-gpu). From its root directory, build it:
 ```
