@@ -56,7 +56,6 @@ public:
     void rotateLeft();
     void rotateRight();
     void controlAutoDescent(InputData inputData);
-    void resetFlags();
     int calculateDescentDelay(int level);
     bool checkValidPosition();
     

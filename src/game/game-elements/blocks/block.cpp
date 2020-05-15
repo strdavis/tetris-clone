@@ -56,7 +56,7 @@ Block::Block(char (*gridArray)[23][14], int level)
 
 void Block::update(InputData inputData)
 {
-    resetFlags();
+    if (fastDropFlag) { fastDropFlag = false; }
     
     if (inputData.keyStates.z.pressed) { rotateLeft(); }
     
@@ -240,10 +240,4 @@ bool Block::checkValidPosition()
     }
     
     return true;
-}
-
-
-void Block::resetFlags()
-{
-    if (fastDropFlag) { fastDropFlag = false; }
 }
