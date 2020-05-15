@@ -1,6 +1,6 @@
 # tetris-clone
 
-A Tetris implementation for OSX written in C++ with SDL2 and SDL_GPU.
+A Tetris implementation for OSX written in C++ with SDL 2.0 and SDL_gpu.
 <br />
 Written as part of a larger project to create an engine for 2D games.
 <br /><br />
@@ -9,21 +9,63 @@ Written as part of a larger project to create an engine for 2D games.
 <br /><br />
 
 
-### To build, you need. . . 
+### To build. . . 
 
-* The XCode command-line developer tools. If you don't have them, they can be installed with the following command:
+* Download the [SDL 2.0 runtime binaries](https://www.libsdl.org/download-2.0.php). Copy the .framework into. . .
+```
+/Library/Frameworks
+```
+<br />
+
+
+* Download the [SDL_GPU repo](https://github.com/grimfang4/sdl-gpu). From the root directory of the repository, run. . .
+```
+cmake -G "Unix Makefiles"
+make
+```
+Find the .framework in. . .
+```
+SDL_gpu/lib
+```
+. . . and copy it to. . .
+```
+/Library/Frameworks
+```
+<br />
+
+
+We need to let SDL_gpu know where to find the SDL 2.0 headers. In the .framework you just copied, open the file. . .
+```
+Versions/A/Headers/SDL_gpu.h
+```
+. . . and change the following lines. . .
+```
+<Line 4>: #include "SDL.h"
+<Line 9>: #include "begin_code.h"
+<Line 2053>: #include "close_code.h"
+```
+. . . to. . .
+```
+<Line 4>: #include "SDL2/SDL.h"
+<Line 9>: #include "SDL2/begin_code.h"
+<Line 2053>: #include "SDL2/close_code.h"
+```
+<br />
+
+
+* Now we're ready to build. Install the XCode command-line developer tools:
 ```
 xcode-select --install
 ```
 <br />
 
-To build the project, run the following command from the root directory of this repository:
+Then run xcodebuild from the root directory of this repository:
 ```
 xcodebuild -project tetris.xcodeproj
 ```
 <br />
 
-Then find the .app bundle in. . . 
+And find the .app bundle in. . . 
 ```
 build/Release/
 ```
