@@ -39,32 +39,15 @@
 		9AA26DA6245BAC6F00A22AA5 /* sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AA26DA4245BAC6F00A22AA5 /* sprite.cpp */; };
 		9AB0A634246B796D00D8CE3A /* random-number-generator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB0A632246B796D00D8CE3A /* random-number-generator.cpp */; };
 		9AB0A637246B8B4900D8CE3A /* file-manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AB0A635246B8B4900D8CE3A /* file-manager.cpp */; };
-		9AB6D60E246EB62E00A6BF2A /* SDL2_gpu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB6D606246EB53A00A6BF2A /* SDL2_gpu.framework */; };
-		9AB6D60F246EB62E00A6BF2A /* SDL2_gpu.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB6D606246EB53A00A6BF2A /* SDL2_gpu.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		9AB6D611246EB63D00A6BF2A /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB6D609246EB54900A6BF2A /* SDL2.framework */; };
-		9AB6D612246EB63D00A6BF2A /* SDL2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB6D609246EB54900A6BF2A /* SDL2.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9AD88F2A2463B8DB00774E7E /* i-block.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD88F282463B8DB00774E7E /* i-block.cpp */; };
+		9AE122EB246F1092000DF5AB /* SDL2_gpu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE122EA246F1092000DF5AB /* SDL2_gpu.framework */; };
+		9AE122ED246F10A2000DF5AB /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE122EC246F10A2000DF5AB /* SDL2.framework */; };
 		9AFC72D6245893A600A17E94 /* app-delegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AFC72D5245893A600A17E94 /* app-delegate.m */; };
 		9AFC72DB245893A700A17E94 /* main-menu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AFC72D9245893A700A17E94 /* main-menu.xib */; };
 		9AFC72DE245893A700A17E94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AFC72DD245893A700A17E94 /* main.m */; };
 		9AFC72E62458DF3100A17E94 /* obj-c-wrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9AFC72E52458DF3100A17E94 /* obj-c-wrapper.mm */; };
 		9AFC72EA2458E7FB00A17E94 /* engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFC72E82458E7FB00A17E94 /* engine.cpp */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		9AB6D610246EB62E00A6BF2A /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				9AB6D60F246EB62E00A6BF2A /* SDL2_gpu.framework in Embed Frameworks */,
-				9AB6D612246EB63D00A6BF2A /* SDL2.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9A1537E024603A77008380DC /* grid.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = grid.cpp; sourceTree = "<group>"; };
@@ -131,10 +114,10 @@
 		9AB0A633246B796D00D8CE3A /* random-number-generator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "random-number-generator.h"; sourceTree = "<group>"; };
 		9AB0A635246B8B4900D8CE3A /* file-manager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "file-manager.cpp"; sourceTree = "<group>"; };
 		9AB0A636246B8B4900D8CE3A /* file-manager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "file-manager.h"; sourceTree = "<group>"; };
-		9AB6D606246EB53A00A6BF2A /* SDL2_gpu.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_gpu.framework; path = ../../../../../../Library/Frameworks/SDL2_gpu.framework; sourceTree = "<group>"; };
-		9AB6D609246EB54900A6BF2A /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
 		9AD88F282463B8DB00774E7E /* i-block.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "i-block.cpp"; sourceTree = "<group>"; };
 		9AD88F292463B8DB00774E7E /* i-block.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "i-block.h"; sourceTree = "<group>"; };
+		9AE122EA246F1092000DF5AB /* SDL2_gpu.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_gpu.framework; path = ../../../../../../Library/Frameworks/SDL2_gpu.framework; sourceTree = "<group>"; };
+		9AE122EC246F10A2000DF5AB /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
 		9AFC72D1245893A600A17E94 /* tetris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tetris.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFC72D4245893A600A17E94 /* app-delegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "app-delegate.h"; sourceTree = "<group>"; };
 		9AFC72D5245893A600A17E94 /* app-delegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "app-delegate.m"; sourceTree = "<group>"; };
@@ -152,8 +135,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AB6D60E246EB62E00A6BF2A /* SDL2_gpu.framework in Frameworks */,
-				9AB6D611246EB63D00A6BF2A /* SDL2.framework in Frameworks */,
+				9AE122ED246F10A2000DF5AB /* SDL2.framework in Frameworks */,
+				9AE122EB246F1092000DF5AB /* SDL2_gpu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,8 +235,8 @@
 		9AA26D89245B9C5C00A22AA5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9AB6D609246EB54900A6BF2A /* SDL2.framework */,
-				9AB6D606246EB53A00A6BF2A /* SDL2_gpu.framework */,
+				9AE122EC246F10A2000DF5AB /* SDL2.framework */,
+				9AE122EA246F1092000DF5AB /* SDL2_gpu.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -318,7 +301,6 @@
 				9AFC72CD245893A600A17E94 /* Sources */,
 				9AFC72CE245893A600A17E94 /* Frameworks */,
 				9AFC72CF245893A600A17E94 /* Resources */,
-				9AB6D610246EB62E00A6BF2A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
