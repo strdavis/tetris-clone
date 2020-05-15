@@ -27,8 +27,8 @@
 
 #include <iostream>
 
-#include <SDL2/SDL.h>
-#include <SDL2_gpu/SDL_gpu.h>
+#include "SDL2/SDL.h"
+#include "SDL2_gpu/SDL_gpu.h"
 
 #include "game-element.h"
 #include "sprite.h"

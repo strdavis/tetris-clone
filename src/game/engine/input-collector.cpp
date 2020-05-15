@@ -27,7 +27,7 @@
 
 #include <iostream>
 
-#include <SDL2/SDL.h>
+#include "SDL2/SDL.h"
 
 #include "data-transfer-types.h"
 

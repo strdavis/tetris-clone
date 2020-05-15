@@ -25,8 +25,8 @@
 
 #pragma once
 
-#include <SDL2/SDL_events.h>
-#include <SDL2/SDL_Scancode.h>
+#include "SDL2/SDL_events.h"
+#include "SDL2/SDL_Scancode.h"
 
 #include "data-transfer-types.h"
 

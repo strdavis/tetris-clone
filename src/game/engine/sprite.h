@@ -27,8 +27,8 @@
 
 #include <memory>
 
-#include <SDL2/SDL_stdinc.h>
-#include <SDL2/SDL_rect.h>
+#include "SDL2/SDL_stdinc.h"
+#include "SDL2/SDL_rect.h"
 
 class WrappedGpuImage;
 class GPU_Image;

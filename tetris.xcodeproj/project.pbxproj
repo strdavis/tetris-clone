@@ -10,6 +10,10 @@
 		9A1537E224603A77008380DC /* grid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A1537E024603A77008380DC /* grid.cpp */; };
 		9A1537E9246078D0008380DC /* title.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A1537E7246078D0008380DC /* title.cpp */; };
 		9A1537ED2460DE25008380DC /* instructions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A1537EB2460DE25008380DC /* instructions.cpp */; };
+		9A386610246EA45A001A6177 /* SDL2_gpu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A38660F246EA45A001A6177 /* SDL2_gpu.framework */; };
+		9A386611246EA45A001A6177 /* SDL2_gpu.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A38660F246EA45A001A6177 /* SDL2_gpu.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9A386613246EA465001A6177 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A386612246EA465001A6177 /* SDL2.framework */; };
+		9A386614246EA465001A6177 /* SDL2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A386612246EA465001A6177 /* SDL2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9A3DA0B62464DAE900979D85 /* block.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A3DA0B42464DAE900979D85 /* block.cpp */; };
 		9A3DA0B924651AD500979D85 /* wrapped-gpu-image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A3DA0B724651AD500979D85 /* wrapped-gpu-image.cpp */; };
 		9A3DA0BC24653A2900979D85 /* o-block.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A3DA0BA24653A2900979D85 /* o-block.cpp */; };
@@ -29,8 +33,6 @@
 		9A63E7AA2461C4C900C06E28 /* digital-display.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A63E7A82461C4C900C06E28 /* digital-display.cpp */; };
 		9A63E7AD2461C72500C06E28 /* panel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A63E7AB2461C72500C06E28 /* panel.cpp */; };
 		9A7CD64F245BD660004F1D8D /* images in Resources */ = {isa = PBXBuildFile; fileRef = 9A7CD64E245BD660004F1D8D /* images */; };
-		9A7CD653245BDAEA004F1D8D /* SDL2_gpu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA26DA7245BAE2300A22AA5 /* SDL2_gpu.framework */; };
-		9A7CD658245BDAEC004F1D8D /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA26D8A245B9C5D00A22AA5 /* SDL2.framework */; };
 		9AA26D85245B9BEF00A22AA5 /* input-collector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AA26D83245B9BEF00A22AA5 /* input-collector.cpp */; };
 		9AA26D91245B9EF800A22AA5 /* game-state.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AA26D8F245B9EF800A22AA5 /* game-state.cpp */; };
 		9AA26D97245BA60300A22AA5 /* display-module.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AA26D95245BA60300A22AA5 /* display-module.cpp */; };
@@ -49,6 +51,21 @@
 		9AFC72EA2458E7FB00A17E94 /* engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFC72E82458E7FB00A17E94 /* engine.cpp */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		9A6A7048246E5D2C00283845 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9A386611246EA45A001A6177 /* SDL2_gpu.framework in Embed Frameworks */,
+				9A386614246EA465001A6177 /* SDL2.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		9A1537E024603A77008380DC /* grid.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = grid.cpp; sourceTree = "<group>"; };
 		9A1537E124603A77008380DC /* grid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = grid.h; sourceTree = "<group>"; };
@@ -56,6 +73,8 @@
 		9A1537E8246078D0008380DC /* title.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = title.h; sourceTree = "<group>"; };
 		9A1537EB2460DE25008380DC /* instructions.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = instructions.cpp; sourceTree = "<group>"; };
 		9A1537EC2460DE25008380DC /* instructions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = instructions.h; sourceTree = "<group>"; };
+		9A38660F246EA45A001A6177 /* SDL2_gpu.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDL2_gpu.framework; sourceTree = "<group>"; };
+		9A386612246EA465001A6177 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDL2.framework; sourceTree = "<group>"; };
 		9A3DA0B42464DAE900979D85 /* block.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = block.cpp; sourceTree = "<group>"; };
 		9A3DA0B52464DAE900979D85 /* block.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = block.h; sourceTree = "<group>"; };
 		9A3DA0B724651AD500979D85 /* wrapped-gpu-image.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "wrapped-gpu-image.cpp"; sourceTree = "<group>"; };
@@ -96,7 +115,6 @@
 		9A7CD64E245BD660004F1D8D /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		9AA26D83245B9BEF00A22AA5 /* input-collector.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "input-collector.cpp"; sourceTree = "<group>"; };
 		9AA26D84245B9BEF00A22AA5 /* input-collector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "input-collector.h"; sourceTree = "<group>"; };
-		9AA26D8A245B9C5D00A22AA5 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
 		9AA26D8F245B9EF800A22AA5 /* game-state.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "game-state.cpp"; sourceTree = "<group>"; };
 		9AA26D90245B9EF800A22AA5 /* game-state.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "game-state.h"; sourceTree = "<group>"; };
 		9AA26D95245BA60300A22AA5 /* display-module.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "display-module.cpp"; sourceTree = "<group>"; };
@@ -111,7 +129,6 @@
 		9AA26DA2245BA91F00A22AA5 /* background.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = background.h; sourceTree = "<group>"; };
 		9AA26DA4245BAC6F00A22AA5 /* sprite.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sprite.cpp; sourceTree = "<group>"; };
 		9AA26DA5245BAC6F00A22AA5 /* sprite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sprite.h; sourceTree = "<group>"; };
-		9AA26DA7245BAE2300A22AA5 /* SDL2_gpu.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_gpu.framework; path = ../../../../../../Library/Frameworks/SDL2_gpu.framework; sourceTree = "<group>"; };
 		9AB0A632246B796D00D8CE3A /* random-number-generator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "random-number-generator.cpp"; sourceTree = "<group>"; };
 		9AB0A633246B796D00D8CE3A /* random-number-generator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "random-number-generator.h"; sourceTree = "<group>"; };
 		9AB0A635246B8B4900D8CE3A /* file-manager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "file-manager.cpp"; sourceTree = "<group>"; };
@@ -135,8 +152,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A7CD658245BDAEC004F1D8D /* SDL2.framework in Frameworks */,
-				9A7CD653245BDAEA004F1D8D /* SDL2_gpu.framework in Frameworks */,
+				9A386610246EA45A001A6177 /* SDL2_gpu.framework in Frameworks */,
+				9A386613246EA465001A6177 /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,8 +252,8 @@
 		9AA26D89245B9C5C00A22AA5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9AA26DA7245BAE2300A22AA5 /* SDL2_gpu.framework */,
-				9AA26D8A245B9C5D00A22AA5 /* SDL2.framework */,
+				9A386612246EA465001A6177 /* SDL2.framework */,
+				9A38660F246EA45A001A6177 /* SDL2_gpu.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -301,6 +318,7 @@
 				9AFC72CD245893A600A17E94 /* Sources */,
 				9AFC72CE245893A600A17E94 /* Frameworks */,
 				9AFC72CF245893A600A17E94 /* Resources */,
+				9A6A7048246E5D2C00283845 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -534,8 +552,8 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+					$SRCROOT,
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -547,6 +565,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SYMROOT = build;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -560,8 +579,8 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+					$SRCROOT,
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -573,6 +592,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SYMROOT = build;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
