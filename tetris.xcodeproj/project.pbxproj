@@ -551,10 +551,7 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					$SRCROOT,
-					"$(PROJECT_DIR)",
-				);
+				FRAMEWORK_SEARCH_PATHS = /Library/Frameworks;
 				INFOPLIST_FILE = info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -578,10 +575,7 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					$SRCROOT,
-					"$(PROJECT_DIR)",
-				);
+				FRAMEWORK_SEARCH_PATHS = /Library/Frameworks;
 				INFOPLIST_FILE = info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
