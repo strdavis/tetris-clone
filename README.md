@@ -17,7 +17,7 @@ Copy the .framework to. . .
 ```
 /Library/Frameworks
 ```
-<br /><br />
+<br />
 
 Download the [SDL_gpu repository](https://github.com/grimfang4/sdl-gpu). From its root directory, build it:
 ```
@@ -32,7 +32,7 @@ SDL_gpu/lib
 ```
 /Library/Frameworks
 ```
-<br /><br />
+<br />
 
 
 We need to let SDL_gpu know where to find the SDL 2.0 headers. In the .framework you just copied, open the file. . .
