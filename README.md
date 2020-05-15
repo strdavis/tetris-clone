@@ -37,3 +37,7 @@ And find the .app bundle in. . .
 build/Release/
 ```
 <br /><br />
+
+This software is released under the MIT license.
+
+Copyright © 2020 Spencer Davis
