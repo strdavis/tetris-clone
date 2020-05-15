@@ -11,14 +11,13 @@ Written as part of a larger project to create an engine for 2D games.
 
 ## To build. . . 
 
-Download the [SDL 2.0 runtime binaries](https://www.libsdl.org/download-2.0.php). Copy the .framework into. . .
-```
-/Library/Frameworks
-```
+Download the [SDL 2.0 runtime binaries](https://www.libsdl.org/download-2.0.php). 
 <br />
+Copy the .framework into the root directory of this repository.
+<br /><br />
 
 
-Download the [SDL_gpu repository](https://github.com/grimfang4/sdl-gpu). From the root directory of the repository, run. . .
+Download the [SDL_gpu repository](https://github.com/grimfang4/sdl-gpu). From its root directory, build it:
 ```
 cmake -G "Unix Makefiles"
 make
@@ -27,11 +26,8 @@ Find the .framework in. . .
 ```
 SDL_gpu/lib
 ```
-. . . and copy it to. . .
-```
-/Library/Frameworks
-```
-<br />
+. . . and copy it to the root directory of this repository.
+<br /><br />
 
 
 We need to let SDL_gpu know where to find the SDL 2.0 headers. In the .framework you just copied, open the file. . .
@@ -57,7 +53,7 @@ Now we're ready to build. Install the XCode command-line developer tools:
 ```
 xcode-select --install
 ```
-Then run xcodebuild from the root directory of this repository:
+Then build from the root directory of this repository:
 ```
 xcodebuild -project tetris.xcodeproj
 ```
