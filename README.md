@@ -24,7 +24,7 @@ Download the [SDL_gpu repository](https://github.com/grimfang4/sdl-gpu). From it
 cmake -G "Unix Makefiles"
 make
 ```
-Find the .framework in. . .
+Find the .framework in the new directory. . .
 ```
 SDL_gpu/lib
 ```
@@ -35,7 +35,7 @@ SDL_gpu/lib
 <br />
 
 
-We need to let SDL_gpu know where to find the SDL 2.0 headers. In the .framework you just copied, open the file. . .
+We need to let SDL_gpu know where to find the SDL 2.0 headers. In SDL_gpu.framework, open the file. . .
 ```
 Versions/A/Headers/SDL_gpu.h
 ```
