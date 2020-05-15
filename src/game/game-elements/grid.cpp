@@ -94,9 +94,9 @@ void Grid::update(InputData inputData)
         checkForGameOver();
     }
     
-    activeBlock->update(inputData);
-    
     collectFastDropPoints();
+    
+    activeBlock->update(inputData);
 }
 
 

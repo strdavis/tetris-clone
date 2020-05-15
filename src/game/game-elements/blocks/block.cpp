@@ -33,6 +33,9 @@ using std::vector;
 using std::shared_ptr;
 using std::make_shared;
 
+using std::cout;
+using std::endl;
+
 
 Block::Block(char (*gridArray)[23][14], int level)
     : GameElement(),
@@ -53,21 +56,23 @@ Block::Block(char (*gridArray)[23][14], int level)
 
 void Block::update(InputData inputData)
 {
+    resetFlags();
+    
+    if (inputData.keyStates.z.pressed) { rotateLeft(); }
+    
+    if (inputData.keyStates.x.pressed) { rotateRight(); }
+    
     if (inputData.keyStates.left.pressed) { moveLeft(); }
     
     if (inputData.keyStates.right.pressed) { moveRight(); }
-    
-    if (inputData.keyStates.down.pressed) { moveDown(); }
     
     if (inputData.keyStates.left.held) { moveLeftContinuously(); }
     
     if (inputData.keyStates.right.held) { moveRightContinuously(); }
     
+    if (inputData.keyStates.down.pressed) { moveDown(); }
+    
     if (inputData.keyStates.down.held) { fastDrop(); }
-    
-    if (inputData.keyStates.z.pressed) { rotateLeft(); }
-    
-    if (inputData.keyStates.x.pressed) { rotateRight(); }
     
     controlAutoDescent(inputData);
 }
@@ -78,7 +83,7 @@ void Block::moveLeft()
     gridPosX--;
     framesSinceLeftMove = 0;
     
-    if (!checkValidPosition()) { gridPosX++; };
+    if (!checkValidPosition()) { gridPosX++; }
 }
 
 
@@ -87,7 +92,7 @@ void Block::moveRight()
     gridPosX++;
     framesSinceRightMove = 0;
     
-    if (!checkValidPosition()) { gridPosX--; };
+    if (!checkValidPosition()) { gridPosX--; }
 }
 
 
@@ -100,7 +105,11 @@ void Block::moveDown()
     {
         gridPosY--;
         hasReachedBottom = true;
-    };
+    }
+    else if (framesSinceAutoDescent != 0) // If not auto-descent
+    {
+        fastDropFlag = true;
+    }
 }
 
 
@@ -140,8 +149,6 @@ void Block::fastDrop()
     else
     {
         framesSinceDownMove++;
-        
-        if (fastDropFlag) { fastDropFlag = false; };
     }
 }
 
@@ -181,8 +188,8 @@ void Block::controlAutoDescent(InputData inputData)
     if ((framesSinceAutoDescent > descentDelay) &&
         inputData.keyStates.down.held != true)
     {
-        moveDown();
         framesSinceAutoDescent = 0;
+        moveDown();
     }
     else
     {
@@ -233,4 +240,10 @@ bool Block::checkValidPosition()
     }
     
     return true;
+}
+
+
+void Block::resetFlags()
+{
+    if (fastDropFlag) { fastDropFlag = false; }
 }
