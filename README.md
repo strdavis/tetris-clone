@@ -9,7 +9,7 @@ Written as part of a larger project to create an engine for 2D games.
 <br /><br />
 
 
-### To build. . . 
+## To build. . . 
 
 Download the [SDL 2.0 runtime binaries](https://www.libsdl.org/download-2.0.php). Copy the .framework into. . .
 ```
