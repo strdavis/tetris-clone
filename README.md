@@ -24,13 +24,8 @@ brew install sdl2
 Install [SDL_gpu](https://github.com/grimfang4/sdl-gpu).
 <br /><br />
 
-Install the XCode command-line developer tools:
-```
-xcode-select --install
-```
-<br />
-
-Then build from the base directory of this repository:
+Then build from the base directory of this repository using the XCode command line tools.
+Note that the command-line tools now require an XCode install to use.
 ```
 xcodebuild -project tetris.xcodeproj
 ```
